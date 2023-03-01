@@ -1,7 +1,14 @@
+/* -------------------------------------------------------------------------- */
+/*                                dependencies                                */
+/* -------------------------------------------------------------------------- */
 import React from "react";
 
-const Greet = () => {
-  return <div>hello</div>;
+type greetProps = {
+  name?: string;
 };
-
+const Greet = ({ name }: greetProps) => {
+  /* ******************************** rendering ******************************* */
+  return <div>hello {name}</div>;
+};
+/* ******************************** PopTypes ******************************** */
 export default Greet;
