@@ -3,16 +3,19 @@ import { render, screen } from "@testing-library/react";
 // local UI component
 import Greet from "./Greet";
 /* ********************************** Test ********************************** */
-test("Greet renders correctly", () => {
-  render(<Greet />);
-  const textElement = screen.getByText("hello");
-  expect(textElement).toBeInTheDocument();
-});
-
-test("Greet renders with a name", () => {
-  render(<Greet name="melek" />);
-  const textElement = screen.getByText("hello melek");
-  expect(textElement).toBeInTheDocument();
+describe("Greet :", () => {
+  // test1
+  test("Greet renders correctly", () => {
+    render(<Greet />);
+    const textElement = screen.getByText("hello");
+    expect(textElement).toBeInTheDocument();
+  });
+  // test2
+  test("Greet renders with a name", () => {
+    render(<Greet name="melek" />);
+    const textElement = screen.getByText("hello melek");
+    expect(textElement).toBeInTheDocument();
+  });
 });
 
 // test Driven Development (TDD) :
