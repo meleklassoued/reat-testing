@@ -5,10 +5,17 @@ const Application = () => {
     <>
       <h1>job application form</h1>
       <h2>Section 1</h2>
+      <p>aslema chabeb</p>
       <form>
         <div>
           <label htmlFor="name">Name</label>
-          <input type="text" id="name" />
+          <input
+            type="text"
+            id="name"
+            placeholder="Name"
+            value="melek"
+            onChange={() => {}}
+          />
         </div>
         <div>
           <label htmlFor="bio">bio</label>

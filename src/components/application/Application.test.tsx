@@ -12,14 +12,20 @@ describe("Application", () => {
       level: 1,
     });
     expect(pageHeading).toBeInTheDocument();
+    // paragraph
+    const paragraphElement = screen.getByText("aslema chabeb");
+    expect(paragraphElement).toBeInTheDocument();
+    // display Value : select input
+    const inputValueElement = screen.getByDisplayValue("melek");
+    expect(inputValueElement).toBeInTheDocument();
     // section heading
     const sectionHeading = screen.getByRole("heading", { level: 2 });
     expect(sectionHeading).toBeInTheDocument();
     // Text Input
-    const nameElement = screen.getByRole("textbox", { name: "Name" });
+    const nameElement = screen.getByPlaceholderText("Name");
     expect(nameElement).toBeInTheDocument();
     // Text Input 2
-    const bioElement = screen.getByRole("textbox", { name: "bio" });
+    const bioElement = screen.getByLabelText("bio");
     expect(bioElement).toBeInTheDocument();
     // select Input :
     const jobLocationElement = screen.getByRole("combobox");
